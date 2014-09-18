@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		578BBEE519CB11DA00DC81CB /* ContactsImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578BBEE419CB11DA00DC81CB /* ContactsImporter.swift */; };
 		57CFB69F19C34A14001F5605 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CFB69E19C34A14001F5605 /* AppDelegate.swift */; };
 		57CFB6A119C34A14001F5605 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CFB6A019C34A14001F5605 /* ViewController.swift */; };
 		57CFB6A419C34A14001F5605 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57CFB6A219C34A14001F5605 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		578BBEE419CB11DA00DC81CB /* ContactsImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsImporter.swift; sourceTree = "<group>"; };
 		57CFB69919C34A14001F5605 /* ContactsImporter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactsImporter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57CFB69D19C34A14001F5605 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57CFB69E19C34A14001F5605 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		57CFB69B19C34A14001F5605 /* ContactsImporter */ = {
 			isa = PBXGroup;
 			children = (
+				578BBEE419CB11DA00DC81CB /* ContactsImporter.swift */,
 				57CFB69E19C34A14001F5605 /* AppDelegate.swift */,
 				57CFB6A019C34A14001F5605 /* ViewController.swift */,
 				57CFB6A219C34A14001F5605 /* Main.storyboard */,
@@ -213,6 +216,7 @@
 			files = (
 				57CFB6BF19C34A43001F5605 /* Contact.swift in Sources */,
 				57CFB6A119C34A14001F5605 /* ViewController.swift in Sources */,
+				578BBEE519CB11DA00DC81CB /* ContactsImporter.swift in Sources */,
 				57CFB69F19C34A14001F5605 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,6 +403,7 @@
 				57CFB6BA19C34A14001F5605 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		57CFB6BB19C34A14001F5605 /* Build configuration list for PBXNativeTarget "ContactsImporterTests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +412,7 @@
 				57CFB6BD19C34A14001F5605 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
