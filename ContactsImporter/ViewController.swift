@@ -10,6 +10,10 @@ import UIKit
 import AddressBook
 
 class ViewController: UIViewController {
+    
+    private var twitterContactsImporter = TwitterContactsImporter()
+    private var facebookContactsImporter = FacebookContactsImporter()
+    private var googlePlusContactsImpoter = GooglePlusContactsImporter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,12 +26,42 @@ class ViewController: UIViewController {
     }
     
     @IBAction func importContacts(sender: AnyObject) {
+        MRProgressOverlayView.showOverlayAddedTo(self.view, animated: true)
         ContactsImporter.importContacts(showContacts)
     }
 
-    func showContacts(contacts: Array<Contact>) {
-        let alertView = UIAlertView(title: "Success!", message: "\(contacts.count) contacts imported successfully", delegate: nil, cancelButtonTitle: "OK")
-        alertView.show()
+    @IBAction func importFacebookContacts(sender: AnyObject) {
+        MRProgressOverlayView.showOverlayAddedTo(self.view, animated: true)
+        self.facebookContactsImporter.importContacts(showContacts)
+    }
+    
+    @IBAction func importGooglePlusContacts(sender: AnyObject) {
+        MRProgressOverlayView.showOverlayAddedTo(self.view, animated: true)
+        self.googlePlusContactsImpoter.importContacts(showContacts)
+    }
+    
+    @IBAction func importTwitterContacts(sender: AnyObject) {
+        MRProgressOverlayView.showOverlayAddedTo(self.view, animated: true)
+        self.twitterContactsImporter.importContacts(showContacts)
+    }
+    
+    func showContacts(contacts: Array<Contact>, error: NSError!) {
+        print(contacts)
+        dispatch_async(dispatch_get_main_queue(), {
+            MRProgressOverlayView.dismissAllOverlaysForView(self.view, animated: true)
+            if(error == nil) {
+                let alertView = UIAlertView(title: "Success!", message: "\(contacts.count) contacts imported successfully", delegate: nil, cancelButtonTitle: "OK")
+                alertView.show()
+                
+            }
+            else {
+                let alertView = UIAlertView(title: "Error \(error.code)",
+                    message: "[\(error.code)] \(error.localizedDescription)\n\n\(contacts.count) contacts imported successfully",
+                    delegate: nil,
+                    cancelButtonTitle: "OK")
+                alertView.show()
+            }
+        })
     }
     
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A343f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPf-zD-tEs">
-                                <rect key="frame" x="87" y="269" width="146" height="30"/>
+                                <rect key="frame" x="87" y="132" width="146" height="30"/>
                                 <state key="normal" title="Import Address Book">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -25,11 +25,44 @@
                                     <action selector="importContacts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xK8-3p-bpJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2N5-eB-p5x">
+                                <rect key="frame" x="74" y="187" width="173" height="30"/>
+                                <state key="normal" title="Import Facebook Friends">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="importFacebookContacts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bb4-y9-elP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKI-ls-4Kc">
+                                <rect key="frame" x="79" y="242" width="163" height="30"/>
+                                <state key="normal" title="Import Google+ Friends">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="importGooglePlusContacts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gnT-ao-jVs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3R-DF-Ze1">
+                                <rect key="frame" x="78" y="297" width="165" height="30"/>
+                                <state key="normal" title="Import Twitter Followers">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="importTwitterContacts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hfo-bC-UVe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="bPf-zD-tEs" secondAttribute="centerX" id="2mr-XT-O2E"/>
-                            <constraint firstAttribute="centerY" secondItem="bPf-zD-tEs" secondAttribute="centerY" id="beD-9j-sUj"/>
+                            <constraint firstItem="m3R-DF-Ze1" firstAttribute="top" secondItem="RKI-ls-4Kc" secondAttribute="bottom" constant="25" id="QwX-MH-cxE"/>
+                            <constraint firstItem="m3R-DF-Ze1" firstAttribute="centerX" secondItem="RKI-ls-4Kc" secondAttribute="centerX" id="Wh2-Ih-iMQ"/>
+                            <constraint firstItem="2N5-eB-p5x" firstAttribute="top" secondItem="bPf-zD-tEs" secondAttribute="bottom" constant="25" id="ZYl-yf-2Rs"/>
+                            <constraint firstAttribute="centerY" secondItem="bPf-zD-tEs" secondAttribute="centerY" constant="137" id="beD-9j-sUj"/>
+                            <constraint firstItem="bPf-zD-tEs" firstAttribute="centerX" secondItem="2N5-eB-p5x" secondAttribute="centerX" constant="-0.5" id="h1v-7w-Z3y"/>
+                            <constraint firstItem="RKI-ls-4Kc" firstAttribute="centerX" secondItem="2N5-eB-p5x" secondAttribute="centerX" id="jZk-kg-iqR"/>
+                            <constraint firstItem="RKI-ls-4Kc" firstAttribute="top" secondItem="2N5-eB-p5x" secondAttribute="bottom" constant="25" id="pci-RZ-VQJ"/>
                         </constraints>
                     </view>
                 </viewController>

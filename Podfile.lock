@@ -1,0 +1,46 @@
+PODS:
+  - Bolts (1.1.3)
+  - Facebook-iOS-SDK (3.19.0):
+    - Bolts (~> 1.0)
+  - google-plus-ios-sdk (1.7.1)
+  - MRProgress (0.7.0):
+    - MRProgress/ActivityIndicator
+    - MRProgress/Blur
+    - MRProgress/Circular
+    - MRProgress/Icons
+    - MRProgress/NavigationBarProgress
+    - MRProgress/Overlay
+  - MRProgress/ActivityIndicator (0.7.0):
+    - MRProgress/Stopable
+  - MRProgress/Blur (0.7.0):
+    - MRProgress/Helper
+  - MRProgress/Circular (0.7.0):
+    - MRProgress/Helper
+    - MRProgress/ProgressBaseClass
+    - MRProgress/Stopable
+  - MRProgress/Helper (0.7.0)
+  - MRProgress/Icons (0.7.0)
+  - MRProgress/NavigationBarProgress (0.7.0):
+    - MRProgress/ProgressBaseClass
+  - MRProgress/Overlay (0.7.0):
+    - MRProgress/ActivityIndicator
+    - MRProgress/Blur
+    - MRProgress/Circular
+    - MRProgress/Helper
+    - MRProgress/Icons
+  - MRProgress/ProgressBaseClass (0.7.0)
+  - MRProgress/Stopable (0.7.0):
+    - MRProgress/Helper
+
+DEPENDENCIES:
+  - Facebook-iOS-SDK (~> 3.17)
+  - google-plus-ios-sdk (~> 1.7)
+  - MRProgress (~> 0.7)
+
+SPEC CHECKSUMS:
+  Bolts: 3db0a875235e0c9042b013af13af0f00f79b102c
+  Facebook-iOS-SDK: cb7d74759d0b1ba546e6e6f1dde407b0d4e448d6
+  google-plus-ios-sdk: bb7b918c2ee0d5f5e389c4fddc06d71995481f67
+  MRProgress: 5abb19ba97ad22c321c37f3d299e32391109b1d6
+
+COCOAPODS: 0.34.2

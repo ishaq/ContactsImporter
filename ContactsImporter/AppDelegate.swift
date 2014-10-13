@@ -41,6 +41,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String, annotation: AnyObject?) -> Bool {
+        if(GPPURLHandler.handleURL(url, sourceApplication: sourceApplication, annotation: annotation)) {
+            return true
+        }
+        else if(FBAppCall.handleOpenURL(url, sourceApplication: sourceApplication)) {
+            return true
+        }
+        return false
+    }
 
 }
 
