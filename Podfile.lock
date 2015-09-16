@@ -1,46 +1,63 @@
 PODS:
-  - Bolts (1.1.3)
-  - Facebook-iOS-SDK (3.19.0):
-    - Bolts (~> 1.0)
+  - Bolts (1.2.2):
+    - Bolts/AppLinks (= 1.2.2)
+    - Bolts/Tasks (= 1.2.2)
+  - Bolts/AppLinks (1.2.2):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.2.2)
+  - Facebook-iOS-SDK (3.24.0):
+    - Bolts (~> 1.2)
   - google-plus-ios-sdk (1.7.1)
-  - MRProgress (0.7.0):
-    - MRProgress/ActivityIndicator
-    - MRProgress/Blur
-    - MRProgress/Circular
-    - MRProgress/Icons
-    - MRProgress/NavigationBarProgress
-    - MRProgress/Overlay
-  - MRProgress/ActivityIndicator (0.7.0):
+  - MRProgress (0.8.2):
+    - MRProgress/ActivityIndicator (= 0.8.2)
+    - MRProgress/Blur (= 0.8.2)
+    - MRProgress/Circular (= 0.8.2)
+    - MRProgress/Icons (= 0.8.2)
+    - MRProgress/NavigationBarProgress (= 0.8.2)
+    - MRProgress/Overlay (= 0.8.2)
+  - MRProgress/ActivityIndicator (0.8.2):
     - MRProgress/Stopable
-  - MRProgress/Blur (0.7.0):
+  - MRProgress/Blur (0.8.2):
     - MRProgress/Helper
-  - MRProgress/Circular (0.7.0):
+  - MRProgress/Circular (0.8.2):
     - MRProgress/Helper
     - MRProgress/ProgressBaseClass
     - MRProgress/Stopable
-  - MRProgress/Helper (0.7.0)
-  - MRProgress/Icons (0.7.0)
-  - MRProgress/NavigationBarProgress (0.7.0):
+  - MRProgress/Helper (0.8.2)
+  - MRProgress/Icons (0.8.2)
+  - MRProgress/NavigationBarProgress (0.8.2):
     - MRProgress/ProgressBaseClass
-  - MRProgress/Overlay (0.7.0):
+  - MRProgress/Overlay (0.8.2):
     - MRProgress/ActivityIndicator
     - MRProgress/Blur
     - MRProgress/Circular
     - MRProgress/Helper
     - MRProgress/Icons
-  - MRProgress/ProgressBaseClass (0.7.0)
-  - MRProgress/Stopable (0.7.0):
+  - MRProgress/ProgressBaseClass (0.8.2)
+  - MRProgress/Stopable (0.8.2):
     - MRProgress/Helper
+  - SwiftyJSON (2.2.1)
 
 DEPENDENCIES:
   - Facebook-iOS-SDK (~> 3.17)
   - google-plus-ios-sdk (~> 1.7)
-  - MRProgress (~> 0.7)
+  - MRProgress (~> 0.8)
+  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+
+EXTERNAL SOURCES:
+  SwiftyJSON:
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  SwiftyJSON:
+    :commit: 50583adf21de1f84a4a06f6dff1b2bb09fe0b03b
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
-  Bolts: 3db0a875235e0c9042b013af13af0f00f79b102c
-  Facebook-iOS-SDK: cb7d74759d0b1ba546e6e6f1dde407b0d4e448d6
-  google-plus-ios-sdk: bb7b918c2ee0d5f5e389c4fddc06d71995481f67
-  MRProgress: 5abb19ba97ad22c321c37f3d299e32391109b1d6
+  Bolts: 20a2bd788273360cb1e31530dc19b8544eef2544
+  Facebook-iOS-SDK: cb209af2e67e3a5d323f966c22e4e482e819405e
+  google-plus-ios-sdk: 47adbe03ea904bdb7aa1c0eca282a23c4686e1bc
+  MRProgress: f4cfe862082418e8f542f077772283f425d6c699
+  SwiftyJSON: ae2d0a3d68025d136602a33c4ee215091ced3e33
 
-COCOAPODS: 0.34.2
+COCOAPODS: 0.38.2

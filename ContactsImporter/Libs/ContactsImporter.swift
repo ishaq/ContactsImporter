@@ -28,7 +28,7 @@ class ContactsImporter {
         }
         else if (ABAddressBookGetAuthorizationStatus() == ABAuthorizationStatus.NotDetermined) {
             var errorRef: Unmanaged<CFError>? = nil
-            var addressBook: ABAddressBookRef? = extractABAddressBookRef(ABAddressBookCreateWithOptions(nil, &errorRef))
+            let addressBook: ABAddressBookRef? = extractABAddressBookRef(ABAddressBookCreateWithOptions(nil, &errorRef))
             ABAddressBookRequestAccessWithCompletion(addressBook, { (accessGranted: Bool, error: CFError!) -> Void in
                 if(accessGranted) {
                     let contacts = self.copyContacts()
@@ -42,55 +42,34 @@ class ContactsImporter {
         }
     }
     
-    private class func retrievePersonProperty(#person: ABRecord!, property: ABPropertyID) -> String? {
+    private class func retrievePersonProperty(person person: ABRecord!, property: ABPropertyID) -> String? {
         // http://stackoverflow.com/questions/26001636/swift-checking-unmanaged-address-book-single-value-property-for-nil
         
-        /* let value:Unmanaged<AnyObject>? = ABRecordCopyValue(person, property)
-        return value?.takeRetainedValue() as AnyObject? as String? */
-        
         let value = ABRecordCopyValue(person, property)
-        if value != nil {
-            if(value!.toOpaque() != COpaquePointer.null()) {
-                return value!.takeRetainedValue() as? String
-            }
-        }
+        return value?.takeRetainedValue() as? String
         
-        return nil
-        
-        /*
-        func retrievePersonProperty(#person: ABRecord!, property: ABPropertyID) -> String? {
-            let value = ABRecordCopyValue(person, property)
-            if value.toOpaque() == COpaquePointer.null() {
-                return nil
-            }
-            return value.takeRetainedValue() as? String
-        }
-        */
     }
     
     private class func retreivePersonMultiValuePropertyLabel(record: ABMultiValueRef, index: Int) -> String? {
         let value = ABMultiValueCopyLabelAtIndex(record, index)
-        if value.toOpaque() == COpaquePointer.null() {
-            return nil
-        }
         return value.takeRetainedValue() as NSString as String
     }
     
     private class func retreivePersonMultiValuePropertyValue(record: ABMultiValueRef, index: Int) -> String? {
         let value: Unmanaged<AnyObject>? = ABMultiValueCopyValueAtIndex(record, index)
-        return value?.takeRetainedValue() as AnyObject? as String?
+        return value?.takeRetainedValue() as AnyObject? as! String?
     }
 
     private class func copyContacts() -> Array<Contact> {
         var errorRef: Unmanaged<CFError>? = nil
-        var addressBook: ABAddressBookRef? = extractABAddressBookRef(ABAddressBookCreateWithOptions(nil, &errorRef))
-        var contactsList: NSArray = ABAddressBookCopyArrayOfAllPeople(addressBook).takeRetainedValue() as NSArray
-        println("\(contactsList.count) records in the array")
+        let addressBook: ABAddressBookRef? = extractABAddressBookRef(ABAddressBookCreateWithOptions(nil, &errorRef))
+        let contactsList: NSArray = ABAddressBookCopyArrayOfAllPeople(addressBook).takeRetainedValue() as NSArray
+        print("\(contactsList.count) records in the array")
         
         var importedContacts = Array<Contact>()
         
         for record:ABRecordRef in contactsList {
-            var contactPerson: ABRecordRef = record
+            let contactPerson: ABRecordRef = record
             var firstName: String? = self.retrievePersonProperty(person: contactPerson, property: kABPersonFirstNameProperty)
             if firstName == nil {
                 firstName = ""
@@ -100,10 +79,10 @@ class ContactsImporter {
                 lastName = ""
             }
             
-            println("-------------------------------")
-            println("\(firstName!) \(lastName!)")
+            print("-------------------------------")
+            print("\(firstName!) \(lastName!)")
             
-            var phonesRef: ABMultiValueRef = ABRecordCopyValue(contactPerson, kABPersonPhoneProperty).takeRetainedValue() as ABMultiValueRef
+            let phonesRef: ABMultiValueRef = ABRecordCopyValue(contactPerson, kABPersonPhoneProperty).takeRetainedValue() as ABMultiValueRef
             var phonesArray  = Array<Dictionary<String,String>>()
             var firstPhone: NSString? = nil
             for var i:Int = 0; i < ABMultiValueGetCount(phonesRef); i++ {
@@ -111,8 +90,8 @@ class ContactsImporter {
                 if label == nil {
                     label = ""
                 }
-                var value: String = self.retreivePersonMultiValuePropertyValue(phonesRef, index: i)!
-                var phone = [label!: value]
+                let value: String = self.retreivePersonMultiValuePropertyValue(phonesRef, index: i)!
+                let phone = [label!: value]
                 phonesArray.append(phone)
                 
                 if i == 0 {
@@ -120,9 +99,9 @@ class ContactsImporter {
                 }
             }
             
-            println("All Phones: \(phonesArray)")
+            print("All Phones: \(phonesArray)")
             
-            var emailsRef: ABMultiValueRef = ABRecordCopyValue(contactPerson, kABPersonEmailProperty).takeRetainedValue() as ABMultiValueRef
+            let emailsRef: ABMultiValueRef = ABRecordCopyValue(contactPerson, kABPersonEmailProperty).takeRetainedValue() as ABMultiValueRef
             var emailsArray = Array<Dictionary<String, String>>()
             var firstEmail:NSString? = nil
             for var i:Int = 0; i < ABMultiValueGetCount(emailsRef); i++ {
@@ -130,8 +109,8 @@ class ContactsImporter {
                 if label == nil {
                     label = ""
                 }
-                var value: String = self.retreivePersonMultiValuePropertyValue(emailsRef, index: i)!
-                var email = [label!: value]
+                let value: String = self.retreivePersonMultiValuePropertyValue(emailsRef, index: i)!
+                let email = [label!: value]
                 emailsArray.append(email)
                 
                 if i == 0 {
@@ -139,11 +118,11 @@ class ContactsImporter {
                 }
             }
             
-            println("All Emails: \(emailsArray)")
+            print("All Emails: \(emailsArray)")
             
-            var birthday: NSDate? = ABRecordCopyValue(contactPerson, kABPersonBirthdayProperty).takeRetainedValue() as? NSDate
+            let birthday: NSDate? = ABRecordCopyValue(contactPerson, kABPersonBirthdayProperty)?.takeRetainedValue() as? NSDate
             
-            println ("Birthday: \(birthday)")
+            print ("Birthday: \(birthday)")
             
             var thumbnail: NSData? = nil
             if ABPersonHasImageData(contactPerson) {

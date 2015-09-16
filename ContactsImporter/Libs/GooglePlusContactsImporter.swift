@@ -42,8 +42,8 @@ class GooglePlusContactsImporter : NSObject, GPPSignInDelegate {
     }
 
     func finishedWithAuth(auth: GTMOAuth2Authentication!, error: NSError!) {
-        println("Received error \(error) and auth object \(auth)")
-        println("User's Email \(auth.userEmail)")
+        print("Received error \(error) and auth object \(auth)")
+        print("User's Email \(auth.userEmail)")
         kickOffContactsRequest()
     }
 
@@ -53,7 +53,7 @@ class GooglePlusContactsImporter : NSObject, GPPSignInDelegate {
         plusService.authorizer = GPPSignIn.sharedInstance().authentication
         
         self.contacts = Array<Contact>()
-        let query = GTLQueryPlus.queryForPeopleListWithUserId("me", collection: kGTLPlusCollectionVisible) as GTLQueryPlus
+        let query = GTLQueryPlus.queryForPeopleListWithUserId("me", collection: kGTLPlusCollectionVisible) as! GTLQueryPlus
         plusService.executeQuery(query, completionHandler: self.googlePlusContactsCallback);
     }
     
@@ -64,14 +64,14 @@ class GooglePlusContactsImporter : NSObject, GPPSignInDelegate {
             return
         }
         
-        let peopleFeed = returnObject as GTLPlusPeopleFeed
+        let peopleFeed = returnObject as! GTLPlusPeopleFeed
         
         let peopleList = peopleFeed.items()
         
-        println("peopleFeed.totalItems: \(peopleFeed.totalItems) peopleFeed.items().count: \(peopleFeed.items().count) peopleFeed.nextPageToken: \(peopleFeed.nextPageToken)")
+        print("peopleFeed.totalItems: \(peopleFeed.totalItems) peopleFeed.items().count: \(peopleFeed.items().count) peopleFeed.nextPageToken: \(peopleFeed.nextPageToken)")
         
         for personObject in peopleList {
-            let person = personObject as GTLPlusPerson
+            let person = personObject as! GTLPlusPerson
             
             let c = Contact(name: person.displayName)
             c.googlePlusId = person.identifier
@@ -85,7 +85,7 @@ class GooglePlusContactsImporter : NSObject, GPPSignInDelegate {
             plusService.retryEnabled = true
             plusService.authorizer = GPPSignIn.sharedInstance().authentication
             
-            let query = GTLQueryPlus.queryForPeopleListWithUserId("me", collection: kGTLPlusCollectionVisible) as GTLQueryPlus
+            let query = GTLQueryPlus.queryForPeopleListWithUserId("me", collection: kGTLPlusCollectionVisible) as! GTLQueryPlus
             query.pageToken = peopleFeed.nextPageToken
             plusService.executeQuery(query, completionHandler: googlePlusContactsCallback)
         }

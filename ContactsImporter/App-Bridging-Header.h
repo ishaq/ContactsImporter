@@ -8,7 +8,5 @@
 
 #import <GooglePlus/GooglePlus.h>
 #import <GoogleOpenSource/GoogleOpenSource.h>
-#import <FacebookSDK/FacebookSDK.h>
 #import "GTLQuery.h"
 #import "GTLQueryPlus.h"
-#import <MRProgress/MRProgress.h>

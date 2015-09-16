@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FacebookSDK
 
 // imports friends from facebook who are also using the app
 // create an app id and configure your project: https://developers.facebook.com/docs/ios/getting-started
@@ -48,7 +49,7 @@ class FacebookContactsImporter {
         }
         // implicit else
         if(state == FBSessionState.Closed || state == FBSessionState.ClosedLoginFailed) {
-            println("Facebook: Session Closed")
+            print("Facebook: Session Closed")
             return
         }
         
@@ -60,16 +61,16 @@ class FacebookContactsImporter {
     func getFacebookFriends() {
         FBRequest.requestForMyFriends().startWithCompletionHandler({ (requestConnection: FBRequestConnection!, response: AnyObject!, error: NSError!) -> Void in
             if let e = error {
-                println("ERROR: \(e)")
+                print("ERROR: \(e)")
                 return
             }
             
             if let resultDict = response as? NSDictionary {
                 
-                let friends = resultDict["data"] as NSArray
+                let friends = resultDict["data"] as! NSArray
                 for f in friends {
-                    let name = f["name"] as String
-                    let facebookId = f["id"] as String
+                    let name = f["name"] as! String
+                    let facebookId = f["id"] as! String
                     let c = Contact(name: name)
                     c.facebookId = facebookId
                     self.contacts.append(c)
@@ -81,7 +82,7 @@ class FacebookContactsImporter {
     }
     
     func handleFacebookError(e:NSError) -> Void {
-        println("Facebook: Error: \(e)")
+        print("Facebook: Error: \(e)")
         if(FBErrorUtility.shouldNotifyUserForError(e)) {
             let alert = UIAlertView(title: "Something went wrong",
                 message: FBErrorUtility.userMessageForError(e),
@@ -91,7 +92,7 @@ class FacebookContactsImporter {
         }
         else {
             if(FBErrorUtility.errorCategoryForError(e) == FBErrorCategory.UserCancelled) {
-                println("User cancelled the login")
+                print("User cancelled the login")
             }
             else if(FBErrorUtility.errorCategoryForError(e) == FBErrorCategory.AuthenticationReopenSession) {
                 let alert = UIAlertView(title: "Session Error",

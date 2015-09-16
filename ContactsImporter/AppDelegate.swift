@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FacebookSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -42,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     
-    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String, annotation: AnyObject?) -> Bool {
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
         if(GPPURLHandler.handleURL(url, sourceApplication: sourceApplication, annotation: annotation)) {
             return true
         }

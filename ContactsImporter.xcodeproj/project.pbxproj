@@ -8,17 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		5772604A19EB9F8D00689E1A /* ContactsImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772604519EB9F8D00689E1A /* ContactsImporter.swift */; };
-		5772604B19EB9F8D00689E1A /* FacebookContactsImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772604619EB9F8D00689E1A /* FacebookContactsImporter.swift */; };
-		5772604C19EB9F8D00689E1A /* GooglePlusContactsImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772604719EB9F8D00689E1A /* GooglePlusContactsImporter.swift */; };
-		5772604D19EB9F8D00689E1A /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772604819EB9F8D00689E1A /* SwiftyJSON.swift */; };
-		5772604E19EB9F8D00689E1A /* TwitterContactsImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772604919EB9F8D00689E1A /* TwitterContactsImporter.swift */; };
+		57BB57571BA9DC7B0027D43A /* FacebookContactsImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BB57541BA9DC7B0027D43A /* FacebookContactsImporter.swift */; settings = {ASSET_TAGS = (); }; };
+		57BB57581BA9DC7B0027D43A /* GooglePlusContactsImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BB57551BA9DC7B0027D43A /* GooglePlusContactsImporter.swift */; settings = {ASSET_TAGS = (); }; };
+		57BB57591BA9DC7B0027D43A /* TwitterContactsImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BB57561BA9DC7B0027D43A /* TwitterContactsImporter.swift */; settings = {ASSET_TAGS = (); }; };
 		57CFB69F19C34A14001F5605 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CFB69E19C34A14001F5605 /* AppDelegate.swift */; };
 		57CFB6A119C34A14001F5605 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CFB6A019C34A14001F5605 /* ViewController.swift */; };
 		57CFB6A419C34A14001F5605 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57CFB6A219C34A14001F5605 /* Main.storyboard */; };
 		57CFB6A619C34A14001F5605 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57CFB6A519C34A14001F5605 /* Images.xcassets */; };
 		57CFB6B519C34A14001F5605 /* ContactsImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CFB6B419C34A14001F5605 /* ContactsImporterTests.swift */; };
 		57CFB6BF19C34A43001F5605 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CFB6BE19C34A43001F5605 /* Contact.swift */; };
-		72D7EE7310CBA22A25B91643 /* libPods-ContactsImporter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4932DF0E09F84CBA94F2FA /* libPods-ContactsImporter.a */; };
+		BFE93A1FC6AC42DC7A523D39 /* Pods_ContactsImporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF3D70EDDA7CE2A02DB3F8A1 /* Pods_ContactsImporter.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,13 +31,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4E4932DF0E09F84CBA94F2FA /* libPods-ContactsImporter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ContactsImporter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5772604519EB9F8D00689E1A /* ContactsImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsImporter.swift; sourceTree = "<group>"; };
-		5772604619EB9F8D00689E1A /* FacebookContactsImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookContactsImporter.swift; sourceTree = "<group>"; };
-		5772604719EB9F8D00689E1A /* GooglePlusContactsImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlusContactsImporter.swift; sourceTree = "<group>"; };
-		5772604819EB9F8D00689E1A /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
-		5772604919EB9F8D00689E1A /* TwitterContactsImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterContactsImporter.swift; sourceTree = "<group>"; };
 		5772604F19EBA27700689E1A /* App-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "App-Bridging-Header.h"; sourceTree = "<group>"; };
+		57BB57541BA9DC7B0027D43A /* FacebookContactsImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookContactsImporter.swift; sourceTree = "<group>"; };
+		57BB57551BA9DC7B0027D43A /* GooglePlusContactsImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlusContactsImporter.swift; sourceTree = "<group>"; };
+		57BB57561BA9DC7B0027D43A /* TwitterContactsImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterContactsImporter.swift; sourceTree = "<group>"; };
 		57CFB69919C34A14001F5605 /* ContactsImporter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactsImporter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57CFB69D19C34A14001F5605 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57CFB69E19C34A14001F5605 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +47,7 @@
 		57CFB6B419C34A14001F5605 /* ContactsImporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsImporterTests.swift; sourceTree = "<group>"; };
 		57CFB6BE19C34A43001F5605 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		94EFDAE79A430883CF9D8B16 /* Pods-ContactsImporter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactsImporter.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContactsImporter/Pods-ContactsImporter.release.xcconfig"; sourceTree = "<group>"; };
+		BF3D70EDDA7CE2A02DB3F8A1 /* Pods_ContactsImporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactsImporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C50AF3705AD60C406AC78D45 /* Pods-ContactsImporter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactsImporter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContactsImporter/Pods-ContactsImporter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72D7EE7310CBA22A25B91643 /* libPods-ContactsImporter.a in Frameworks */,
+				BFE93A1FC6AC42DC7A523D39 /* Pods_ContactsImporter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +73,7 @@
 		275680197B81170CA58062EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4E4932DF0E09F84CBA94F2FA /* libPods-ContactsImporter.a */,
+				BF3D70EDDA7CE2A02DB3F8A1 /* Pods_ContactsImporter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -83,11 +81,10 @@
 		5772604419EB9F8D00689E1A /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				57BB57541BA9DC7B0027D43A /* FacebookContactsImporter.swift */,
+				57BB57551BA9DC7B0027D43A /* GooglePlusContactsImporter.swift */,
+				57BB57561BA9DC7B0027D43A /* TwitterContactsImporter.swift */,
 				5772604519EB9F8D00689E1A /* ContactsImporter.swift */,
-				5772604619EB9F8D00689E1A /* FacebookContactsImporter.swift */,
-				5772604719EB9F8D00689E1A /* GooglePlusContactsImporter.swift */,
-				5772604819EB9F8D00689E1A /* SwiftyJSON.swift */,
-				5772604919EB9F8D00689E1A /* TwitterContactsImporter.swift */,
 			);
 			path = Libs;
 			sourceTree = "<group>";
@@ -173,6 +170,7 @@
 				57CFB69619C34A14001F5605 /* Frameworks */,
 				57CFB69719C34A14001F5605 /* Resources */,
 				9B1840F9F8E9CDECA54A5899 /* Copy Pods Resources */,
+				7189D66F4D635CA7E3241FDD /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -207,7 +205,9 @@
 		57CFB69119C34A14001F5605 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Kahaf;
 				TargetAttributes = {
 					57CFB69819C34A14001F5605 = {
@@ -258,6 +258,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		7189D66F4D635CA7E3241FDD /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContactsImporter/Pods-ContactsImporter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		72D725DC7391126C7D3EDE39 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -295,12 +310,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5772604E19EB9F8D00689E1A /* TwitterContactsImporter.swift in Sources */,
+				57BB57581BA9DC7B0027D43A /* GooglePlusContactsImporter.swift in Sources */,
+				57BB57571BA9DC7B0027D43A /* FacebookContactsImporter.swift in Sources */,
+				57BB57591BA9DC7B0027D43A /* TwitterContactsImporter.swift in Sources */,
 				57CFB6BF19C34A43001F5605 /* Contact.swift in Sources */,
 				57CFB6A119C34A14001F5605 /* ViewController.swift in Sources */,
-				5772604B19EB9F8D00689E1A /* FacebookContactsImporter.swift in Sources */,
-				5772604D19EB9F8D00689E1A /* SwiftyJSON.swift in Sources */,
-				5772604C19EB9F8D00689E1A /* GooglePlusContactsImporter.swift in Sources */,
 				57CFB69F19C34A14001F5605 /* AppDelegate.swift in Sources */,
 				5772604A19EB9F8D00689E1A /* ContactsImporter.swift in Sources */,
 			);
@@ -356,6 +370,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -422,6 +437,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ContactsImporter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kahaf.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ContactsImporter/App-Bridging-Header.h";
 			};
@@ -434,6 +450,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ContactsImporter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kahaf.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ContactsImporter/App-Bridging-Header.h";
 			};
@@ -443,16 +460,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = ContactsImporterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kahaf.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ContactsImporter.app/ContactsImporter";
 			};
@@ -462,12 +477,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ContactsImporterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kahaf.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ContactsImporter.app/ContactsImporter";
 			};

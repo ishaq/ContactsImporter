@@ -8,6 +8,8 @@
 
 import UIKit
 import Social
+import Accounts
+import SwiftyJSON
 
 
 enum TwitterErrorCodes: Int {
@@ -42,7 +44,7 @@ class TwitterContactsImporter {
                 }
                 
                 let url = NSURL(string: "https://api.twitter.com/1.1/followers/list.json")
-                let twitterAccount = twitterAccounts.last as ACAccount
+                let twitterAccount = twitterAccounts.last as! ACAccount
                 // NOTE: all params are strings because SLRequest does not accept any other parameter type
                 let params = ["screen_name": twitterAccount.username, "count": "200", "skip_status": "true"]
                 let request = SLRequest(forServiceType: SLServiceTypeTwitter, requestMethod: SLRequestMethod.GET, URL: url, parameters: params)
@@ -68,8 +70,8 @@ class TwitterContactsImporter {
         let json = JSON(data: data)
         
         if let errors = json["errors"].array {
-            println("errors: \(errors)")
-            println("\(self.contacts)")
+            print("errors: \(errors)")
+            print("\(self.contacts)")
             // TODO: pass error object
             self.callback(contacts: self.contacts, error: nil)
             return
@@ -90,13 +92,13 @@ class TwitterContactsImporter {
             self.contacts.append(c)
         }
         
-        let nextCursor = json["next_cursor"].integerValue
+        let nextCursor = json["next_cursor"].intValue
         
         if(nextCursor != 0) {
             let url = NSURL(string: "https://api.twitter.com/1.1/followers/list.json")
             let twitterAccountType = self.accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierTwitter)
             let twitterAccounts = self.accountStore.accountsWithAccountType(twitterAccountType)
-            let twitterAccount = twitterAccounts.last as ACAccount
+            let twitterAccount = twitterAccounts.last as! ACAccount
             // NOTE: all params are strings because SLRequest does not accept any other parameter type
             let params = ["screen_name": twitterAccount.username, "count": "200", "skip_status": "true", "cursor": "\(nextCursor)"]
             let request = SLRequest(forServiceType: SLServiceTypeTwitter, requestMethod: SLRequestMethod.GET, URL: url, parameters: params)

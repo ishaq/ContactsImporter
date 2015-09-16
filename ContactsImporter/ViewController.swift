@@ -8,6 +8,8 @@
 
 import UIKit
 import AddressBook
+import FacebookSDK
+import MRProgress
 
 class ViewController: UIViewController {
     
