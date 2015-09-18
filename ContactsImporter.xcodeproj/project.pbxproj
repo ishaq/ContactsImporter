@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5772604A19EB9F8D00689E1A /* ContactsImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5772604519EB9F8D00689E1A /* ContactsImporter.swift */; };
+		5787AB631BA9FF3A0036A238 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5787AB621BA9FF3A0036A238 /* Contact.swift */; settings = {ASSET_TAGS = (); }; };
 		57BB57571BA9DC7B0027D43A /* FacebookContactsImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BB57541BA9DC7B0027D43A /* FacebookContactsImporter.swift */; settings = {ASSET_TAGS = (); }; };
 		57BB57581BA9DC7B0027D43A /* GooglePlusContactsImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BB57551BA9DC7B0027D43A /* GooglePlusContactsImporter.swift */; settings = {ASSET_TAGS = (); }; };
 		57BB57591BA9DC7B0027D43A /* TwitterContactsImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BB57561BA9DC7B0027D43A /* TwitterContactsImporter.swift */; settings = {ASSET_TAGS = (); }; };
@@ -16,7 +17,6 @@
 		57CFB6A419C34A14001F5605 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57CFB6A219C34A14001F5605 /* Main.storyboard */; };
 		57CFB6A619C34A14001F5605 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57CFB6A519C34A14001F5605 /* Images.xcassets */; };
 		57CFB6B519C34A14001F5605 /* ContactsImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CFB6B419C34A14001F5605 /* ContactsImporterTests.swift */; };
-		57CFB6BF19C34A43001F5605 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CFB6BE19C34A43001F5605 /* Contact.swift */; };
 		BFE93A1FC6AC42DC7A523D39 /* Pods_ContactsImporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF3D70EDDA7CE2A02DB3F8A1 /* Pods_ContactsImporter.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -33,6 +33,7 @@
 /* Begin PBXFileReference section */
 		5772604519EB9F8D00689E1A /* ContactsImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsImporter.swift; sourceTree = "<group>"; };
 		5772604F19EBA27700689E1A /* App-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "App-Bridging-Header.h"; sourceTree = "<group>"; };
+		5787AB621BA9FF3A0036A238 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		57BB57541BA9DC7B0027D43A /* FacebookContactsImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookContactsImporter.swift; sourceTree = "<group>"; };
 		57BB57551BA9DC7B0027D43A /* GooglePlusContactsImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlusContactsImporter.swift; sourceTree = "<group>"; };
 		57BB57561BA9DC7B0027D43A /* TwitterContactsImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterContactsImporter.swift; sourceTree = "<group>"; };
@@ -45,7 +46,6 @@
 		57CFB6AE19C34A14001F5605 /* ContactsImporterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactsImporterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57CFB6B319C34A14001F5605 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57CFB6B419C34A14001F5605 /* ContactsImporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsImporterTests.swift; sourceTree = "<group>"; };
-		57CFB6BE19C34A43001F5605 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		94EFDAE79A430883CF9D8B16 /* Pods-ContactsImporter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactsImporter.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContactsImporter/Pods-ContactsImporter.release.xcconfig"; sourceTree = "<group>"; };
 		BF3D70EDDA7CE2A02DB3F8A1 /* Pods_ContactsImporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactsImporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C50AF3705AD60C406AC78D45 /* Pods-ContactsImporter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactsImporter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContactsImporter/Pods-ContactsImporter.debug.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +81,7 @@
 		5772604419EB9F8D00689E1A /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				5787AB621BA9FF3A0036A238 /* Contact.swift */,
 				57BB57541BA9DC7B0027D43A /* FacebookContactsImporter.swift */,
 				57BB57551BA9DC7B0027D43A /* GooglePlusContactsImporter.swift */,
 				57BB57561BA9DC7B0027D43A /* TwitterContactsImporter.swift */,
@@ -119,7 +120,6 @@
 				57CFB6A219C34A14001F5605 /* Main.storyboard */,
 				57CFB6A519C34A14001F5605 /* Images.xcassets */,
 				57CFB69C19C34A14001F5605 /* Supporting Files */,
-				57CFB6BE19C34A43001F5605 /* Contact.swift */,
 			);
 			path = ContactsImporter;
 			sourceTree = "<group>";
@@ -313,7 +313,7 @@
 				57BB57581BA9DC7B0027D43A /* GooglePlusContactsImporter.swift in Sources */,
 				57BB57571BA9DC7B0027D43A /* FacebookContactsImporter.swift in Sources */,
 				57BB57591BA9DC7B0027D43A /* TwitterContactsImporter.swift in Sources */,
-				57CFB6BF19C34A43001F5605 /* Contact.swift in Sources */,
+				5787AB631BA9FF3A0036A238 /* Contact.swift in Sources */,
 				57CFB6A119C34A14001F5605 /* ViewController.swift in Sources */,
 				57CFB69F19C34A14001F5605 /* AppDelegate.swift in Sources */,
 				5772604A19EB9F8D00689E1A /* ContactsImporter.swift in Sources */,

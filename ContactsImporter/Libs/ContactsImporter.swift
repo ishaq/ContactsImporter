@@ -129,7 +129,7 @@ class ContactsImporter {
                 thumbnail = ABPersonCopyImageDataWithFormat(contactPerson, kABPersonImageFormatThumbnail).takeRetainedValue() as NSData
             }
             
-            let c = Contact(name: "\(firstName) \(lastName)")
+            let c = Contact(name: "\(firstName!) \(lastName!)")
             c.birthday = birthday
             c.phonesArray = phonesArray
             c.emailsArray = emailsArray
