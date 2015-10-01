@@ -52,7 +52,10 @@ class ContactsImporter {
     
     private class func retreivePersonMultiValuePropertyLabel(record: ABMultiValueRef, index: Int) -> String? {
         let value = ABMultiValueCopyLabelAtIndex(record, index)
-        return value.takeRetainedValue() as NSString as String
+        if value == nil {
+            return nil
+        }
+        return value.takeRetainedValue() as NSString as String?
     }
     
     private class func retreivePersonMultiValuePropertyValue(record: ABMultiValueRef, index: Int) -> String? {
