@@ -1,3 +1,6 @@
+**!!!NOTE:** The `AddressBook` framework has been deprecated by Apple in iOS 9.0, Use [Contacts](https://developer.apple.com/library/ios/documentation/Contacts/Reference/Contacts_Framework/index.html#//apple_ref/doc/uid/TP40015328) framework instead.
+
+
 ContactsImporter
 ================
 
